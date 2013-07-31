@@ -1,0 +1,23 @@
+# IDEA files (NOTE: We do want the main .iml file in version control!)
+/*.iws
+/.idea/workspace.xml
+/.idea/compiler.xml
+/.idea/modules.xml
+/.idea/encodings.xml
+/.idea/libraries/*
+/.idea/artifacts/*
+**/*.iml
+atlassian-ide-plugin.xml
+.ant-targets-*.xml
+# Vim files
+*~
+**/*~
+*.swp
+**/*.swp
+# Config files
+build.properties
+env-vars.sh
+classpaths.sh
+# Build / deploy directories
+/target/
+/*/target/

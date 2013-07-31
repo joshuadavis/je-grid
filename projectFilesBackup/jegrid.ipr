@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
+<project relativePaths="true" version="4">
   <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
     <buildFile url="file://$PROJECT_DIR$/jegrid/build.xml">
       <additionalClassPath>
         <entry path="file://$PROJECT_DIR$/lib/junit-3.8.1.jar" />
       </additionalClassPath>
+      <antReference projectDefault="true" />
+      <customJdkName value="" />
+      <maximumHeapSize value="128" />
+      <properties />
     </buildFile>
   </component>
-  <component name="ArtifactManager">
-    <artifact name="jegrid:jar">
-      <output-path>$PROJECT_DIR$/jegrid</output-path>
-      <root id="root">
-        <element id="archive" name="jegrid.jar">
-          <element id="archive" name="jegrid.jar">
-            <element id="module-output" name="jegrid" />
-          </element>
-        </element>
-      </root>
-    </artifact>
+  <component name="BuildJarProjectSettings">
+    <option name="BUILD_JARS_ON_MAKE" value="false" />
   </component>
   <component name="CodeStyleProjectProfileManger">
     <option name="PROJECT_PROFILE" />
@@ -102,6 +98,7 @@
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
+    <option name="DEPLOY_AFTER_MAKE" value="0" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -117,11 +114,6 @@
       <entry name="?*.dtd" />
       <entry name="?*.tld" />
     </wildcardResourcePatterns>
-    <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-    </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -156,6 +148,18 @@
     <option name="OUTPUT_DIRECTORY" />
   </component>
   <component name="IdProvider" IDEtalkID="AD99C24CD524C1C0357EA05E17B31ED8" />
+  <component name="InspectionProjectProfileManager">
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+    <scopes />
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+      </profile>
+    </profiles>
+    <list size="0" />
+  </component>
   <component name="IntelliCalc">
     <mode value="0" />
     <system value="10" />
@@ -320,89 +324,10 @@
       </item>
     </group>
   </component>
-  <component name="ProjectCodeStyleSettingsManager">
-    <option name="PER_PROJECT_SETTINGS">
-      <value>
-        <option name="BRACE_STYLE" value="2" />
-        <option name="CLASS_BRACE_STYLE" value="2" />
-        <option name="METHOD_BRACE_STYLE" value="2" />
-        <option name="ELSE_ON_NEW_LINE" value="true" />
-        <option name="WHILE_ON_NEW_LINE" value="true" />
-        <option name="CATCH_ON_NEW_LINE" value="true" />
-        <option name="FINALLY_ON_NEW_LINE" value="true" />
-        <XML>
-          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
-        </XML>
-        <codeStyleSettings language="CFML">
-          <option name="BRACE_STYLE" value="2" />
-          <option name="ELSE_ON_NEW_LINE" value="true" />
-          <option name="WHILE_ON_NEW_LINE" value="true" />
-          <option name="CATCH_ON_NEW_LINE" value="true" />
-          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
-        </codeStyleSettings>
-        <codeStyleSettings language="ECMA Script Level 4">
-          <option name="BRACE_STYLE" value="2" />
-          <option name="CLASS_BRACE_STYLE" value="2" />
-          <option name="METHOD_BRACE_STYLE" value="2" />
-          <option name="ELSE_ON_NEW_LINE" value="true" />
-          <option name="WHILE_ON_NEW_LINE" value="true" />
-          <option name="CATCH_ON_NEW_LINE" value="true" />
-          <option name="FINALLY_ON_NEW_LINE" value="true" />
-          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
-        </codeStyleSettings>
-        <codeStyleSettings language="GSP">
-          <indentOptions>
-            <option name="INDENT_SIZE" value="2" />
-          </indentOptions>
-        </codeStyleSettings>
-        <codeStyleSettings language="Groovy">
-          <option name="BRACE_STYLE" value="2" />
-          <option name="CLASS_BRACE_STYLE" value="2" />
-          <option name="METHOD_BRACE_STYLE" value="2" />
-          <option name="ELSE_ON_NEW_LINE" value="true" />
-          <option name="WHILE_ON_NEW_LINE" value="true" />
-          <option name="CATCH_ON_NEW_LINE" value="true" />
-          <option name="FINALLY_ON_NEW_LINE" value="true" />
-          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
-          <indentOptions>
-            <option name="INDENT_SIZE" value="2" />
-          </indentOptions>
-        </codeStyleSettings>
-        <codeStyleSettings language="JAVA">
-          <option name="BRACE_STYLE" value="2" />
-          <option name="CLASS_BRACE_STYLE" value="2" />
-          <option name="METHOD_BRACE_STYLE" value="2" />
-          <option name="ELSE_ON_NEW_LINE" value="true" />
-          <option name="WHILE_ON_NEW_LINE" value="true" />
-          <option name="CATCH_ON_NEW_LINE" value="true" />
-          <option name="FINALLY_ON_NEW_LINE" value="true" />
-          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
-        </codeStyleSettings>
-        <codeStyleSettings language="JavaScript">
-          <option name="BRACE_STYLE" value="2" />
-          <option name="METHOD_BRACE_STYLE" value="2" />
-          <option name="ELSE_ON_NEW_LINE" value="true" />
-          <option name="WHILE_ON_NEW_LINE" value="true" />
-          <option name="CATCH_ON_NEW_LINE" value="true" />
-          <option name="FINALLY_ON_NEW_LINE" value="true" />
-          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
-          <indentOptions>
-            <option name="CONTINUATION_INDENT_SIZE" value="8" />
-          </indentOptions>
-        </codeStyleSettings>
-        <codeStyleSettings language="SQL">
-          <indentOptions>
-            <option name="CONTINUATION_INDENT_SIZE" value="8" />
-            <option name="TAB_SIZE" value="4" />
-          </indentOptions>
-        </codeStyleSettings>
-      </value>
-    </option>
-    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
-  </component>
   <component name="ProjectDetails">
     <option name="projectName" value="jegrid" />
   </component>
+  <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
     <option name="state" value="https://jdavis@svn.berlios.de/svnroot/repos/jgrid/trunk/jegrid.ipr" />
   </component>
@@ -412,30 +337,12 @@
       <module fileurl="file://$PROJECT_DIR$/iteration1.iml" filepath="$PROJECT_DIR$/iteration1.iml" />
       <module fileurl="file://$PROJECT_DIR$/jegrid/jegrid.iml" filepath="$PROJECT_DIR$/jegrid/jegrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/rngpack/rngpack.iml" filepath="$PROJECT_DIR$/rngpack/rngpack.iml" />
-      <module fileurl="file://$PROJECT_DIR$//top.iml" filepath="$PROJECT_DIR$//top.iml" />
+      <module fileurl="file://$PROJECT_DIR$/top.iml" filepath="$PROJECT_DIR$/top.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_4" assert-keyword="true" jdk-15="false" project-jdk-name="1.6" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_4" assert-keyword="true" jdk-15="false" project-jdk-name="1.5" project-jdk-type="JavaSDK" />
   <component name="ProjectRunConfigurationManager">
-    <configuration default="false" name="BenchmarkMain" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="benchmark.BenchmarkMain" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="jegrid" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GridSingletonTest" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="GridSingletonTest" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="org.jegrid.GridSingletonTest" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="test" />
@@ -449,10 +356,11 @@
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
-    <configuration default="false" name="ServerMain" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="ServerMain" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="org.jegrid.ServerMain" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="test" />
@@ -466,10 +374,11 @@
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
-    <configuration default="false" name="Single thread server" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="Single thread server" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="org.jegrid.ServerMain" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="test 1" />
@@ -489,33 +398,33 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
-    <configuration default="false" name="ClientTest" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="jegrid" />
+    <configuration default="false" name="BenchmarkMain" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
+      <option name="MAIN_CLASS_NAME" value="benchmark.BenchmarkMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="org.jegrid" />
-      <option name="MAIN_CLASS_NAME" value="org.jegrid.ClientTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
+      <module name="jegrid" />
       <envs />
-      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
-    <configuration default="false" name="ClientTest.testBackgroundTask" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="ClientTest.testBackgroundTask" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
+      <pattern>
+        <option name="PATTERN" value="org.jegrid.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
       <module name="jegrid" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -528,17 +437,50 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
       <envs />
-      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
-    <configuration default="false" name="MicroContainerTest" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="ClientTest" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
+      <pattern>
+        <option name="PATTERN" value="org.jegrid.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+      <module name="jegrid" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="org.jegrid" />
+      <option name="MAIN_CLASS_NAME" value="org.jegrid.ClientTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="false" name="MicroContainerTest" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
+      <pattern>
+        <option name="PATTERN" value="org.jegrid.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
       <module name="jegrid" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -551,11 +493,11 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
       <envs />
-      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="33310" />
         <option name="TRANSPORT" value="0" />
@@ -564,7 +506,9 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
   </component>
   <component name="ResourceManagerContainer">
@@ -586,7 +530,7 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="com.intellij.jsf.UserDefinedFacesConfigs">
@@ -601,13 +545,6 @@
     <option name="autoscrollingFromSource" value="false" />
   </component>
   <component name="libraryTable">
-    <library name="commons-logging-1.0.4">
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.0.4.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
     <library name="concurrent">
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/lib/concurrent.jar!/" />
@@ -626,18 +563,27 @@
         <root url="jar://$PROJECT_DIR$/lib/jgroups-src-2.2.9.4.zip!/" />
       </SOURCES>
     </library>
-    <library name="jms">
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/jms.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$PROJECT_DIR$/lib/jms-src.zip!/" />
-      </SOURCES>
-    </library>
     <library name="junit-3.8.1">
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/lib/junit-3.8.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="picocontainer">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/picocontainer-gems-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/picocontainer-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/picocontainer-1.2-src.zip!/" />
+        <root url="jar://$PROJECT_DIR$/lib/picocontainer-gems-1.2-src.zip!/" />
+      </SOURCES>
+    </library>
+    <library name="commons-logging-1.0.4">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.0.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -651,15 +597,13 @@
         <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.13-src.zip!/" />
       </SOURCES>
     </library>
-    <library name="picocontainer">
+    <library name="jms">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/picocontainer-gems-1.2.jar!/" />
-        <root url="jar://$PROJECT_DIR$/lib/picocontainer-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jms.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$PROJECT_DIR$/lib/picocontainer-1.2-src.zip!/" />
-        <root url="jar://$PROJECT_DIR$/lib/picocontainer-gems-1.2-src.zip!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jms-src.zip!/" />
       </SOURCES>
     </library>
   </component>
