@@ -8,7 +8,7 @@ import java.io.Serializable;
  * Date: Oct 7, 2006
  * Time: 10:17:45 AM
  */
-public interface InputProcessor
+public interface InputProcessor<I extends Serializable,R extends Serializable>
 {
     /**
      * Process the input, produce the output.
@@ -17,5 +17,5 @@ public interface InputProcessor
      * @param input   The input.
      * @return The result.
      */
-    Serializable processInput(int inputId, Serializable input);
+    R processInput(int inputId, I input);
 }

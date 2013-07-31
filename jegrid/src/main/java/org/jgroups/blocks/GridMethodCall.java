@@ -17,6 +17,7 @@ public class GridMethodCall extends MethodCall implements Externalizable
 {
     private static final long serialVersionUID = -1373091004255907094L;
 
+    @SuppressWarnings("UnusedDeclaration")
     public GridMethodCall()
     {
         super();

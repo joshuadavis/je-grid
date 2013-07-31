@@ -6,7 +6,6 @@ import org.jgroups.util.Util;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 
@@ -29,7 +28,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
 {
     private Object serverObject = null;
     private Marshaller marshaller = null;
-    private List additionalChannelListeners = null;
+    private final List<ChannelListener> additionalChannelListeners;
     private MethodLookup methodLookup = null;
 
 
@@ -39,7 +38,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
         super(channel, messageListener, membershipListener);
         channel.addChannelListener(this);
         this.serverObject = server_obj;
-        additionalChannelListeners = new ArrayList();
+        additionalChannelListeners = new ArrayList<ChannelListener>();
     }
 
     public interface Marshaller
@@ -54,26 +53,31 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
         return "GridRpcDispatcher";
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public void setMarshaller(Marshaller m)
     {
         this.marshaller = m;
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public Marshaller getMarshaller()
     {
         return marshaller;
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public Object getServerObject()
     {
         return serverObject;
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public MethodLookup getMethodLookup()
     {
         return methodLookup;
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public void setMethodLookup(MethodLookup method_lookup)
     {
         this.methodLookup = method_lookup;
@@ -95,6 +99,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
     }
 
 
+    @SuppressWarnings("UnusedDeclaration")
     public RspList callRemoteMethods(Vector dests, String method_name, Object[] args,
                                      Class[] types, int mode, long timeout) throws MarshallingException
     {
@@ -102,6 +107,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
         return callRemoteMethods(dests, method_call, mode, timeout);
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public RspList callRemoteMethods(Vector dests, String method_name, Object[] args,
                                      String[] signature, int mode, long timeout) throws MarshallingException
     {
@@ -142,12 +148,14 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
         }
 
         Message msg = new Message(null, null, buf);
+        @SuppressWarnings("UnnecessaryLocalVariable")
         RspList retval = super.castMessage(dests, msg, mode, timeout);
 //        if (log.isTraceEnabled()) log.trace("responses: " + retval);
         return retval;
     }
 
 
+    @SuppressWarnings("UnusedDeclaration")
     public Object callRemoteMethod(Address dest, String method_name, Object[] args,
                                    Class[] types, int mode, long timeout)
             throws TimeoutException, SuspectedException, MarshallingException
@@ -156,6 +164,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
         return callRemoteMethod(dest, method_call, mode, timeout);
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public Object callRemoteMethod(Address dest, String method_name, Object[] args,
                                    String[] signature, int mode, long timeout)
             throws TimeoutException, SuspectedException, MarshallingException
@@ -167,9 +176,9 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
     public Object callRemoteMethod(Address dest, MethodCall method_call, int mode, long timeout)
             throws TimeoutException, SuspectedException, MarshallingException
     {
-        byte[] buf = null;
-        Message msg = null;
-        Object retval = null;
+        byte[] buf;
+        Message msg;
+        Object retval;
 
 /*
         if (log.isTraceEnabled())
@@ -198,7 +207,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
      */
     public Object handle(Message req)
     {
-        Object body = null;
+        Object body;
         MethodCall method_call;
 
         if (serverObject == null)
@@ -262,6 +271,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
      *
      * @return true if the listener was added or false if the listener was already in the list.
      */
+    @SuppressWarnings("UnusedDeclaration")
     public boolean addChannelListener(ChannelListener l)
     {
 
@@ -279,6 +289,7 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
     /**
      * @return true if the channel was removed indeed.
      */
+    @SuppressWarnings("UnusedDeclaration")
     public boolean removeChannelListener(ChannelListener l)
     {
 
@@ -295,9 +306,8 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
 
         synchronized (additionalChannelListeners)
         {
-            for (Iterator i = additionalChannelListeners.iterator(); i.hasNext();)
+            for (ChannelListener l : additionalChannelListeners)
             {
-                ChannelListener l = (ChannelListener) i.next();
                 try
                 {
                     l.channelConnected(channel);
@@ -317,9 +327,8 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
 
         synchronized (additionalChannelListeners)
         {
-            for (Iterator i = additionalChannelListeners.iterator(); i.hasNext();)
+            for (ChannelListener l : additionalChannelListeners)
             {
-                ChannelListener l = (ChannelListener) i.next();
                 try
                 {
                     l.channelDisconnected(channel);
@@ -339,9 +348,8 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
 
         synchronized (additionalChannelListeners)
         {
-            for (Iterator i = additionalChannelListeners.iterator(); i.hasNext();)
+            for (ChannelListener l : additionalChannelListeners)
             {
-                ChannelListener l = (ChannelListener) i.next();
                 try
                 {
                     l.channelClosed(channel);
@@ -359,9 +367,8 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
 
         synchronized (additionalChannelListeners)
         {
-            for (Iterator i = additionalChannelListeners.iterator(); i.hasNext();)
+            for (ChannelListener l : additionalChannelListeners)
             {
-                ChannelListener l = (ChannelListener) i.next();
                 try
                 {
                     l.channelShunned();
@@ -383,9 +390,8 @@ public class GridRpcDispatcher extends MessageDispatcher implements ChannelListe
 
         synchronized (additionalChannelListeners)
         {
-            for (Iterator i = additionalChannelListeners.iterator(); i.hasNext();)
+            for (ChannelListener l : additionalChannelListeners)
             {
-                ChannelListener l = (ChannelListener) i.next();
                 try
                 {
                     l.channelReconnected(new_addr);

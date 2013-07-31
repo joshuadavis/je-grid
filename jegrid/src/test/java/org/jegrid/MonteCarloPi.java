@@ -12,7 +12,7 @@ import java.util.Random;
  * Date: Dec 31, 2005
  * Time: 5:39:01 PM
  */
-public class MonteCarloPi implements InputProcessor, LifecycleAware
+public class MonteCarloPi implements InputProcessor<MonteCarloPi.Input,MonteCarloPi.Output>, LifecycleAware
 {
     private static Logger log = Logger.getLogger(MonteCarloPi.class);
 
@@ -138,9 +138,8 @@ public class MonteCarloPi implements InputProcessor, LifecycleAware
         log.info("" + iterationsPerSecond + " iterations / sec.");
     }
 
-    public Serializable processInput(int inputId, Serializable input)
+    public Output processInput(int inputId, Input in)
     {
-        Input in = (Input) input;
         // Simulate a needle of length 'l' being dropped at random between two parallel lines separated by
         // distance 'd'.  The needle is smaller than the distance between the lines (d > l).
         // On each random trial, one end of the needle will fall distance 'A' between the lines, so
