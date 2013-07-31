@@ -20,6 +20,7 @@ public class ParllelMonteCarloPi {
         public void aggregate(TaskData output)
         {
             Result r = (Result) output.getData();
+            log.info("aggregate: " + r.getApproximation());
             if (result == null)
                 result = new Result(r);
             else
@@ -28,12 +29,20 @@ public class ParllelMonteCarloPi {
 
         public void done()
         {
-
+            log.info("done!  result=" + result.getApproximation() + " iterations=" + result.getIterations());
         }
     }
 
     public static void main(String[] args) {
         try {
+            // Serial execution first, time it.
+            int iterations = 100000;
+            int blocks = 1000;
+            log.info("Starting serial execution...");
+            MonteCarloPiService serial = new MonteCarloPiService();
+            Result result = (Result) serial.processInput(0, new Input(0, iterations * blocks));
+            log.info("approximate pi = " + result.getApproximation());
+
             // Connect to the grid as a client.
             GridConfiguration config = new GridConfiguration();
             config.setGridName("test");
@@ -44,14 +53,6 @@ public class ParllelMonteCarloPi {
 
             Task task = client.createTask("parallel mc pi");
 
-            // Serial execution first, time it.
-            int iterations = 100000;
-            int blocks = 1000;
-            log.info("Starting serial execution...");
-            MonteCarloPiService serial = new MonteCarloPiService();
-            Result result = (Result) serial.processInput(0, new Input(0, iterations * blocks));
-            log.info("approximate pi = " + result.getApproximation());
-
             // Issue the parallel part of the job.
             long seed = 1;
             for (int i = 0; i < blocks ; i++)
@@ -60,7 +61,7 @@ public class ParllelMonteCarloPi {
             MCPAggregator aggregator = new MCPAggregator();
             task.run(MonteCarloPiService.class.getName(), aggregator, 10, false);
 
-
+            log.info("exiting...");
 
         } catch (Throwable t) {
             log.error(t);

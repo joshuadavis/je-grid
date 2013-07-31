@@ -19,8 +19,8 @@ public class MonteCarloPiService implements InputProcessor, LifecycleAware
 
     public Serializable processInput(int inputId, Serializable input)
     {
-        log.info("execute() : ENTER");
         Input in = (Input)input;
+        log.info("execute() : ENTER " + inputId + " seed=" + in.getSeed() );
         int n = in.getIterations();
         double d = in.getDistance();
         double l = in.getLength();
@@ -34,8 +34,8 @@ public class MonteCarloPiService implements InputProcessor, LifecycleAware
             if (a < x)
                 hits++;
         }
-        Result result = new Result(hits, n, l, d);
-        log.info("execute() : LEAVE");
+        Result result = new Result(hits, n, d, l);
+        log.info("execute() : LEAVE " + inputId);
         return result;
     }
 

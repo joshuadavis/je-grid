@@ -10,7 +10,7 @@
     <option name="ENABLE_SWING_INSPECTOR" value="false" />
     <option name="ENV_VARIABLES" />
     <option name="PASS_PARENT_ENVS" value="true" />
-    <module name="jegrid" />
+    <module name="examples" />
     <envs />
     <RunnerSettings RunnerId="Profile ">
       <option name="myExternalizedOptions" value="&#10;additional-options2=onexit\=snapshot&#10;" />

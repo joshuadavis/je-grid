@@ -26,10 +26,6 @@ public class Result implements Serializable {
         this(r.hits,r.iterations,r.d,r.l);
     }
 
-    public int getHits() {
-        return hits;
-    }
-
     public int getIterations() {
         return iterations;
     }
@@ -48,8 +44,8 @@ public class Result implements Serializable {
         if (this.d != other.d || this.l != other.l) {
             throw new IllegalArgumentException("Length and distance must be the same in order to aggregate!");
         }
-        this.hits += other.getHits();
-        this.iterations += other.getIterations();
+        this.hits += other.hits;
+        this.iterations += other.iterations;
     }
 
 }
