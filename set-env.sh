@@ -1,8 +1,7 @@
 #!/bin/bash
 
-DEFAULT_ANT_HOME=/opt/apache-ant-1.6.5
-DEFAULT_FORREST_HOME=/opt/apache-forrest-0.7
-DEFAULT_JAVA_HOME=/usr/java/j2sdk1.4.2_12
+DEFAULT_M2_HOME=/opt/apache-maven-3.0.4
+DEFAULT_JAVA_HOME=/opt/jdk1.7
 
 cygwin=false;
 darwin=false;
@@ -15,20 +14,11 @@ case `uname` in
            ;;
 esac
 
-if [ -z "$ANT_HOME" ] ; then
-    if [ -d $DEFAULT_ANT_HOME ] ; then
-        export ANT_HOME=$DEFAULT_ANT_HOME
+if [ -z "$M2_HOME" ] ; then
+    if [ -d $DEFAULT_M2_HOME ] ; then
+        export M2_HOME=$DEFAULT_M2_HOME
     else
-        echo "ERROR: Unable to locate ANT. Please set ANT_HOME."
-        exit -1
-    fi
-fi
-
-if [ -z "$FORREST_HOME" ] ; then
-    if [ -d $DEFAULT_FORREST_HOME ] ; then
-        export FORREST_HOME=$DEFAULT_FORREST_HOME
-    else
-        echo "ERROR: Unable to locate FORREST. Please set FORREST_HOME."
+        echo "ERROR: Unable to locate Maven. Please set M2_HOME."
         exit -1
     fi
 fi
@@ -42,11 +32,10 @@ if [ ! -d "$JAVA_HOME" ] ; then
     exit -1
 fi
 
-export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$FORREST_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 
 # Cygwin-ify the home directory environment variables.
 if [ "$cygwin" = "true" ] ; then
-  export FORREST_HOME=`cygpath --mixed "$FORREST_HOME"`
+  export M2_HOME=`cygpath --mixed "$M2_HOME"`
   export JAVA_HOME=`cygpath --mixed "$JAVA_HOME"`
-  export ANT_HOME=`cygpath --mixed "$ANT_HOME"`
 fi
