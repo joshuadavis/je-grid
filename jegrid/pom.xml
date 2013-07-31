@@ -20,8 +20,7 @@
 
         <dependency>
             <groupId>jgroups</groupId>
-            <artifactId>jgroups-all</artifactId>
-            <version>2.2.9.4</version>
+            <artifactId>jgroups</artifactId>
         </dependency>
 
         <dependency>
@@ -31,7 +30,7 @@
         </dependency>
 
         <dependency>
-            <groupId>jms</groupId>
+            <groupId>javax.jms</groupId>
             <artifactId>jms</artifactId>
             <version>1.1</version>
         </dependency>
@@ -51,7 +50,6 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
-            <version>1.0.4</version>
         </dependency>
 
         <dependency>
@@ -68,37 +66,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>install-jgroups</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${basedir}/../lib/jgroups-all-2.2.9.4.jar</file>
-                            <groupId>jgroups</groupId>
-                            <artifactId>jgroups-all</artifactId>
-                            <version>2.2.9.4</version>
-                            <packaging>jar</packaging>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>install-jgroups-src</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${basedir}/../lib/jgroups-src-2.2.9.4.zip</file>
-                            <groupId>jgroups</groupId>
-                            <artifactId>jgroups-all</artifactId>
-                            <version>2.2.9.4</version>
-                            <packaging>jar</packaging>
-                            <classifier>sources</classifier>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -106,7 +73,7 @@
                     <!--
                     The ClassLoader setting is required to workaround a bug in the Sun/Oracle JDK 6
                     -->
-                    <argLine>-Dsun.lang.ClassLoader.allowArraySyntax=true</argLine>
+                    <argLine>-Dsun.lang.ClassLoader.allowArraySyntax=true -Djava.net.preferIPv4Stack=true</argLine>
 
                 </configuration>
             </plugin>

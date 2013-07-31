@@ -43,6 +43,7 @@ public class ServerJvms
             JavaProcess jvm = jvms[i];
             Properties props = new Properties();
             props.put("sun.lang.ClassLoader.allowArraySyntax","true");
+            props.put("java.net.preferIPv4Stack","true");
             String p = System.getProperty("emma.coverage.out.file");
             if (p != null && p.length() > 0)
             {
