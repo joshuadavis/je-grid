@@ -101,6 +101,15 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!--
+                    The ClassLoader setting is required to workaround a bug in the Sun/Oracle JDK 6
+                    -->
+                    <argLine>-Dsun.lang.ClassLoader.allowArraySyntax=true</argLine>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

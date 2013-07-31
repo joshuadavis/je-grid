@@ -78,6 +78,7 @@ public class JavaProcess
     {
         if (process != null)
             stopIt();
+        log.info("start() : " + mainClass + " args: " + (args != null ? Arrays.asList(args) : "<none>"));
         Runtime rt = Runtime.getRuntime();
         List commandLine = new ArrayList();
         commandLine.add(getJavaCommand());
