@@ -3,18 +3,9 @@
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/idea/iteration1_classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/iteration1">
-      <sourceFolder url="file://$MODULE_DIR$/iteration1/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/iteration1/test_src" isTestSource="true" />
-    </content>
+    <content url="file://$MODULE_DIR$/iteration1" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="concurrent" level="project" />
-    <orderEntry type="library" name="jgroups" level="project" />
-    <orderEntry type="library" name="junit-3.8.1" level="project" />
-    <orderEntry type="library" name="picocontainer" level="project" />
-    <orderEntry type="library" name="commons-logging-1.0.4" level="project" />
-    <orderEntry type="library" name="log4j-1.2.13" level="project" />
   </component>
 </module>
 
