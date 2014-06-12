@@ -15,9 +15,11 @@ atlassian-ide-plugin.xml
 *.swp
 **/*.swp
 # Config files
-build.properties
 env-vars.sh
 classpaths.sh
+/.gradle
 # Build / deploy directories
 /target/
 /*/target/
+/build/
+/*/build/
