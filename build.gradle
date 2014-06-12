@@ -1,15 +1,23 @@
 
+
 allprojects {
   apply plugin: 'java'
+  apply plugin: 'maven'
   group = 'org.jegrid'
   version = '1.0-SNAPSHOT'
   repositories {
+    mavenLocal()
     mavenCentral()
     maven {
       url 'http://repository.jboss.org/nexus/content/groups/public'
     }
     flatDir {
       dirs "$rootDir/lib"
+    }
+  }
+  test {
+    filter {
+      includeTestsMatching '*Test'
     }
   }
 }
@@ -23,7 +31,7 @@ project(":jegrid") {
     compile 'jgroups:jgroups-all:2.2.9.4'
     compile 'javax.jms:jms-api:1.1-rev-1'
     compile 'commons-logging:commons-logging:1.0.4'
-    testCompile 'junit:junit:3.8.1'
+    testCompile 'junit:junit:4.11'
   }
 }
 
