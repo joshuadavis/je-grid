@@ -18,11 +18,12 @@
     <orderEntry type="library" exported="" name="Gradle: picocontainer-gems-1.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: proxytoys-0.2.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: cglib-nodep-2.1_3" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: jgroups-all-2.2.9.4" level="project" />
     <orderEntry type="library" exported="" name="Gradle: jms-api-1.1-rev-1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: commons-logging-1.0.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit-4.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jgroups-all-2.4.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: bsh-1.2-b3" level="project" />
   </component>
 </module>
 

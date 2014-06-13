@@ -288,7 +288,8 @@ public class MonteCarloPi implements InputProcessor<MonteCarloPi.Input,MonteCarl
 
         public void done()
         {
-            log.info("DONE: " + aggregate.showResult());
+            final String message = "DONE: " + (aggregate != null ? aggregate.showResult() : "<null>");
+            log.info(message);
         }
     }
 

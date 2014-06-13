@@ -11,9 +11,9 @@ allprojects {
     maven {
       url 'http://repository.jboss.org/nexus/content/groups/public'
     }
-    flatDir {
-      dirs "$rootDir/lib"
-    }
+//    flatDir {
+//      dirs "$rootDir/lib"
+//    }
   }
   test {
     filter {
@@ -28,7 +28,8 @@ project(":jegrid") {
     compile 'log4j:log4j:1.2.13'
     compile 'org.picocontainer:picocontainer:1.2'
     compile 'org.picocontainer:picocontainer-gems:1.2'
-    compile 'jgroups:jgroups-all:2.2.9.4'
+    compile 'jgroups:jgroups-all:2.4.1'
+    compile 'bsh:bsh:1.2-b3'
     compile 'javax.jms:jms-api:1.1-rev-1'
     compile 'commons-logging:commons-logging:1.0.4'
     testCompile 'junit:junit:4.11'
