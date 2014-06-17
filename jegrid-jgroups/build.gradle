@@ -1,0 +1,8 @@
+dependencies {
+  compile project(":jegrid-api")
+  compile group: 'org.jgroups', name: 'jgroups', version: '3.4.4.Final'
+}
+
+test {
+  systemProperty 'java.net.preferIPv4Stack', 'true'
+}

@@ -1,1 +1,1 @@
-include 'jegrid', 'examples', 'rngpack'
+include 'jegrid-jgroups', 'jegrid-api'

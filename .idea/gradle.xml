@@ -9,9 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/examples" />
-            <option value="$PROJECT_DIR$/jegrid" />
-            <option value="$PROJECT_DIR$/rngpack" />
+            <option value="$PROJECT_DIR$/jegrid-api" />
+            <option value="$PROJECT_DIR$/jegrid-jgroups" />
           </set>
         </option>
       </GradleProjectSettings>
