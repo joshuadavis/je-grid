@@ -4,5 +4,4 @@ dependencies {
 }
 
 test {
-  systemProperty 'java.net.preferIPv4Stack', 'true'
 }

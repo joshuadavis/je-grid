@@ -1,1 +1,4 @@
-include 'jegrid-jgroups', 'jegrid-api'
+include 'jegrid-jgroups'
+include 'jegrid-api'
+include 'jegrid-core'
+
